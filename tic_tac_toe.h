@@ -18,8 +18,6 @@ public:
 
     TicTacToe(int);
 
-    Marble *get_board();
-
     bool is_winner(Marble);
 
     int get_empty_count();

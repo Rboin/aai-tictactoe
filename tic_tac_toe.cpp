@@ -15,10 +15,6 @@ TicTacToe::TicTacToe(int board_size) {
     count = 0;
 }
 
-TicTacToe::Marble *TicTacToe::get_board() {
-    return board;
-}
-
 bool TicTacToe::do_move(TicTacToe::Marble marble, int position) {
     if (position > board_size - 1)
         return false;
@@ -146,7 +142,7 @@ int TicTacToe::do_ai_move(TicTacToe::Marble m) {
 }
 
 /**
- * Naive minimax with alpha beta pruning and Zobrist hashing
+ * Minimax with alpha beta pruning and Zobrist hashing
  * @param me
  * @param other
  * @param depth
