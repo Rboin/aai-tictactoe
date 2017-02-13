@@ -3,13 +3,15 @@
 //
 
 #include <iostream>
-#include <tgmath.h>
+#include <algorithm>
+#include <cmath>
 #include "tic_tac_toe.h"
 
 TicTacToe::TicTacToe(int board_size) {
     this->board_size = board_size;
     board = new Marble[board_size];
-
+    for (int i = 0; i < board_size; i++)
+        board[i] = EMPTY;
     zobrist_table = new int[board_size * 3];
     init_zobrist_table();
     count = 0;
